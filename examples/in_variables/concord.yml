@@ -1,10 +1,16 @@
 configuration:
   arguments:
     name: "Concord"
+    checkpointSuffix: "checkpoint"
+
 
 flows:
   default:
   # override "name" variable
+  - log: "Before the checkpoint"
+  - checkpoint: "first_${checkpointSuffix}"
+  - log: "After the checkpoint"
+  
   - call: sayHello
     in:
       name: "${initiator.username}"
