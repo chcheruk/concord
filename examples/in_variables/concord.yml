@@ -9,7 +9,7 @@ flows:
   - log: "After the first checkpoint"
 
   step 1:
-  - log: "Before the checkpoint"
+  - log: "Before the hghghgh checkpoint"
   - checkpoint: "second_${checkpointSuffix}"
   - log: "After the second checkpoint"
 
