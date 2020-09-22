@@ -6,5 +6,10 @@ flows:
   default:
   - log: "Before the checkpoint"
   - checkpoint: "first_${checkpointSuffix}"
-  - log: "After the checkpoint"
+  - log: "After the first checkpoint"
+
+  step 1:
+  - log: "Before the checkpoint"
+  - checkpoint: "second_${checkpointSuffix}"
+  - log: "After the second checkpoint"
 
