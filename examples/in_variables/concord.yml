@@ -1,34 +1,10 @@
 configuration:
   arguments:
-    name: "Concord"
     checkpointSuffix: "checkpoint"
-
 
 flows:
   default:
-  # override "name" variable
   - log: "Before the checkpoint"
   - checkpoint: "first_${checkpointSuffix}"
   - log: "After the checkpoint"
-  
-  # the set value will be kept after the call is ended
-
-  # will log "Bye, admin"
-  - sayBye
-
-  sayHello:
-  - log: "Hello, ${name}"
-  - log: "Starting the process..."
-  - checkpoint: "first"
-  - log: "Continuing the process..."
-  - checkpoint: "second"
-  - log: "Done!"
-
-  sayBye:
-  - log: "Bye, ${name}"
-  - log: "Starting the process..."
-  - checkpoint: "first"
-  - log: "Continuing the process..."
-  - checkpoint: "second"
-  - log: "Done!"
 
