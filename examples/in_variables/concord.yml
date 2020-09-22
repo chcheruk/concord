@@ -8,6 +8,11 @@ flows:
   - call: sayHello
     in:
       name: "${initiator.username}"
+  - log: "Starting the process..."
+  - checkpoint: "first"
+  - log: "Continuing the process..."
+  - checkpoint: "second"
+  - log: "Done!"
 
   # the set value will be kept after the call is ended
 
@@ -16,7 +21,17 @@ flows:
 
   sayHello:
   - log: "Hello, ${name}"
+  - log: "Starting the process..."
+  - checkpoint: "first"
+  - log: "Continuing the process..."
+  - checkpoint: "second"
+  - log: "Done!"
 
   sayBye:
   - log: "Bye, ${name}"
+  - log: "Starting the process..."
+  - checkpoint: "first"
+  - log: "Continuing the process..."
+  - checkpoint: "second"
+  - log: "Done!"
 
