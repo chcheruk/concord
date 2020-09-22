@@ -11,15 +11,6 @@ flows:
   - checkpoint: "first_${checkpointSuffix}"
   - log: "After the checkpoint"
   
-  - call: sayHello
-    in:
-      name: "${initiator.username}"
-  - log: "Starting the process..."
-  - checkpoint: "first"
-  - log: "Continuing the process..."
-  - checkpoint: "second"
-  - log: "Done!"
-
   # the set value will be kept after the call is ended
 
   # will log "Bye, admin"
